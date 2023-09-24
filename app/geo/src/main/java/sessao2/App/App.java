@@ -1,5 +1,8 @@
 package sessao2.App;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
 import sessao2.Formas.Circulo;
 import sessao2.Formas.IForma;
 import sessao2.Formas.Quadrado;
@@ -29,49 +32,49 @@ public class App {
 
 
         //Definição do quadrado
-        double[] coorQuadradoX = new double[4];
-        double[] coorQuadradoY = new double[4];
-        coorQuadradoX[0] = 0;
-        coorQuadradoY[0] = 0;
-        coorQuadradoX[1] = 3;
-        coorQuadradoY[1] = 0;
-        coorQuadradoX[2] = 3;
-        coorQuadradoY[2] = 3;
-        coorQuadradoX[3] = 0;
-        coorQuadradoY[3] = 3;
+        ArrayList<BigDecimal> coorQuadradoX = new ArrayList<BigDecimal>();
+        ArrayList<BigDecimal> coorQuadradoY = new ArrayList<BigDecimal>();
+        coorQuadradoX.add(new BigDecimal(0));
+        coorQuadradoY.add(new BigDecimal(0));
+        coorQuadradoX.add(new BigDecimal(3));
+        coorQuadradoY.add(new BigDecimal(0));
+        coorQuadradoX.add(new BigDecimal(3));
+        coorQuadradoY.add(new BigDecimal(3));
+        coorQuadradoX.add(new BigDecimal(0));
+        coorQuadradoY.add(new BigDecimal(3));
         Quadrado quadrado = new Quadrado(coorQuadradoX, coorQuadradoY);
 
         //Definição do Retangulo
-        double[] coorRetanguloX = new double[4];
-        double[] coorRetanguloY = new double[4];
-        coorRetanguloX[0] = 0;
-        coorRetanguloY[0] = 0;
-        coorRetanguloX[0] = 3;
-        coorRetanguloY[0] = 0;
-        coorRetanguloX[0] = 3;
-        coorRetanguloY[0] = 4;
-        coorRetanguloX[0] = 0;
-        coorRetanguloY[0] = 4;
+        ArrayList coorRetanguloX = new ArrayList();
+        ArrayList coorRetanguloY = new ArrayList();
+        coorRetanguloX.add(new BigDecimal(0));
+        coorRetanguloY.add(new BigDecimal(0));
+        coorRetanguloX.add(new BigDecimal(3));
+        coorRetanguloY.add(new BigDecimal(0));
+        coorRetanguloX.add(new BigDecimal(3));
+        coorRetanguloY.add(new BigDecimal(4));
+        coorRetanguloX.add(new BigDecimal(0));
+        coorRetanguloY.add(new BigDecimal(4));
         Retangulo retangulo = new Retangulo(coorRetanguloX, coorRetanguloY);
 
 
         //Definição do Triangulo
-        double[] coorTrianguloX = new double[3];
-        double[] coorTrianguloY = new double[3];
-        coorTrianguloX[0] = 0;
-        coorTrianguloY[0] = 0;
-        coorTrianguloX[0] = 3;
-        coorTrianguloY[0] = 0;
-        coorTrianguloX[0] = 3;
-        coorTrianguloY[0] = 4;
+        ArrayList coorTrianguloX = new ArrayList();
+        ArrayList coorTrianguloY = new ArrayList();
+        coorTrianguloX.add(new BigDecimal(0));
+        coorTrianguloY.add(new BigDecimal(0));
+        coorTrianguloX.add(new BigDecimal(3));
+        coorTrianguloY.add(new BigDecimal(0));
+        coorTrianguloX.add(new BigDecimal(3));
+        coorTrianguloY.add(new BigDecimal(4));
 
         Triangulo triangulo = new Triangulo(coorTrianguloX, coorTrianguloY);
 
         //Definição do Circulo
-        double[] coorCirculoX = new double[1];
-        double[] coorCirculoY = new double[1];
-        coorCirculoX[0] = 0;
-        coorCirculoY[0] = 0;
+        ArrayList coorCirculoX = new ArrayList();
+        ArrayList coorCirculoY = new ArrayList();
+        coorCirculoX.add(new BigDecimal(0));
+        coorCirculoY.add(new BigDecimal(0));
         Circulo circulo = new Circulo(coorCirculoX, coorCirculoY, 2);
 
         switch(opcao){

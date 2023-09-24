@@ -1,5 +1,7 @@
 package sessao2.Formas;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 
 /**
  * A classe Retangulo tem como objetivo criar uma representação
@@ -28,9 +30,9 @@ public class Retangulo extends Forma implements IForma{
     * @param coordenadaY - representa o conjunto de coordenadas Y dos pontos
     * @since 1.0
     */
-    public Retangulo(double[] coordenadaX, double[] coordenadaY){
+    public Retangulo(ArrayList coordenadaX, ArrayList coordenadaY){
         super( coordenadaX, coordenadaY, "Retangulo");
-        coordenadaX[1] = 10;
+
     }
 
 
@@ -45,8 +47,9 @@ public class Retangulo extends Forma implements IForma{
     * @since 1.0
     * @return int - valor do perímetro do retângulo
     */
-    public double perimetro(){
-        return 0;
+    public BigDecimal perimetro(){
+        BigDecimal perimetro  = ((BigDecimal)this.getCoordenadaX().get(1)).add((BigDecimal)this.getCoordenadaY().get(2)).multiply(new BigDecimal(2));
+        return perimetro;
     }
 
     /**
@@ -54,8 +57,9 @@ public class Retangulo extends Forma implements IForma{
     * @since 1.0
     * @return int - valor da área do retângulo
     */
-    public double area(){
-        return 0;
+    public BigDecimal area(){
+        BigDecimal area  = ((BigDecimal)this.getCoordenadaX().get(1)).multiply((BigDecimal)this.getCoordenadaY().get(2));
+        return area;
     }
 
 

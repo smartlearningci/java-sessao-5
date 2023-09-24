@@ -1,5 +1,7 @@
 package sessao2.Formas;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 
 /**
  * A classe Circulo tem como objetivo criar uma representação
@@ -36,7 +38,7 @@ public class Circulo extends Forma implements IForma{
     * @param coordenadaY - representa o conjunto de coordenadas Y dos pontos
     * @since 1.0
     */
-    public Circulo(double[] coordenadaX, double[] coordenadaY, double raio){
+    public Circulo(ArrayList coordenadaX, ArrayList coordenadaY, double raio){
         super( coordenadaX, coordenadaY, "Circulo");
         this.raio = raio;
     }
@@ -53,8 +55,10 @@ public class Circulo extends Forma implements IForma{
     * @since 1.0
     * @return int - valor do perímetro do quadrado
     */
-    public double perimetro(){
-        return 0;
+    public BigDecimal perimetro(){
+
+        BigDecimal perimetro = new BigDecimal(2*this.raio*PI);
+        return perimetro;
     }
 
     /**
@@ -62,11 +66,10 @@ public class Circulo extends Forma implements IForma{
     * @since 1.0
     * @return int - valor da área do quadrado
     */
-    public double area(){
-        return 0;
+    public BigDecimal area(){
+        BigDecimal area = new BigDecimal(this.raio*this.raio*PI);
+        return area;
     }
-
-
 
 }
 

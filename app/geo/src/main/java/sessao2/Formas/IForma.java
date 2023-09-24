@@ -1,5 +1,7 @@
 package sessao2.Formas;
 
+import java.math.BigDecimal;
+
 /**
  * A interface IForma tem como objetivo padronizar o comportamento comum
  * das forma geométricas. Para isso são formalizados os métodos:
@@ -20,13 +22,13 @@ public interface IForma {
     * @since 1.0
     * @return double - valor do perímetro da forma
     */
-    public double perimetro();
+    public BigDecimal perimetro();
     /**
     * <p>Método que cálcula o valor sa área do retangulo
     * @since 1.0
     * @return double - valor da área da forma
     */
-    public double area();
+    public BigDecimal area();
 
     /**
     * Método que devolve o nome da forma que representa

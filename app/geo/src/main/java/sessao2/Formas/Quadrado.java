@@ -1,5 +1,8 @@
 package sessao2.Formas;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
 /**
  * A classe Quadrado tem como objetivo criar uma representação
  * desta forma geométrica.
@@ -21,7 +24,7 @@ package sessao2.Formas;
  */
 public class Quadrado extends Forma implements IForma {
 
-    
+
 
     /**
     * <p>Construtor que recebe por parâmetros as coordenadas dos vértices do
@@ -30,7 +33,7 @@ public class Quadrado extends Forma implements IForma {
     * @param coordenadaY - representa o conjunto de coordenadas Y dos pontos
     * @since 1.0
     */
-    public Quadrado(double[] coordenadaX, double[] coordenadaY){
+    public Quadrado(ArrayList coordenadaX, ArrayList coordenadaY){
         super( coordenadaX, coordenadaY, "Quadrado");
         //coordenadaX[1] = 10;
     }
@@ -47,9 +50,11 @@ public class Quadrado extends Forma implements IForma {
     * @since 1.0
     * @return int - valor do perímetro do quadrado
     */
-    public double perimetro(){
+    public BigDecimal perimetro(){
 
-        return 0;
+        BigDecimal perimetro = new BigDecimal(0);
+        perimetro = ((BigDecimal)this.getCoordenadaX().get(1)).add((BigDecimal)this.getCoordenadaY().get(2)).multiply(new BigDecimal(2));
+        return perimetro;
     }
 
     /**
@@ -57,9 +62,11 @@ public class Quadrado extends Forma implements IForma {
     * @since 1.0
     * @return int - valor da área do quadrado
     */
-    public double area(){
+    public BigDecimal area(){
 
-        return 0;
+        BigDecimal area  = ((BigDecimal)this.getCoordenadaX().get(1)).multiply((BigDecimal)this.getCoordenadaY().get(2));
+        return area;
+
     }
 
 

@@ -1,5 +1,7 @@
 package sessao2.Formas;
 
+import java.util.ArrayList;
+
 /**
  * A classe Forma tem como objetivo criar uma representação
  * base comum das formas geométricas.
@@ -9,8 +11,8 @@ package sessao2.Formas;
  * Adicionalmente os pontos são armazenados numa estrutura array double[]
  * para mais rápida manipulação
  * <ul>
- * <li>double coordenadaX</li>
- * <li>double coordenadaX</li>
+ * <li>ArrayList coordenadaX</li>
+ * <li>ArrayList coordenadaX</li>
  * </ul>
  *
  * É criada também uma variável interna, numeroDePonts, que permite saber quantos
@@ -25,10 +27,10 @@ package sessao2.Formas;
 public class Forma {
 
 
-    private double coordenadaX[];
-    private double coordenadaY[];
+    private ArrayList coordenadaX;
+    private ArrayList coordenadaY;
     private int numeroDePontos;
-    private static final double PI = 3.14;
+    protected static final double PI = 3.14;
     private String nomeDaForma = "";
 
 
@@ -40,20 +42,23 @@ public class Forma {
     * @param coordenadaY - representa o conjunto de coordenadas Y dos pontos
     * @since 2.0
     */
-    public Forma(double[] coordenadaX, double[] coordenadaY, String nome) {
-        this.coordenadaX = coordenadaX;
-        this.coordenadaY = coordenadaY;
-        this.numeroDePontos = coordenadaX.length;
+    public Forma(ArrayList coordenadaX, ArrayList coordenadaY, String nome) {
+    	
+        this.coordenadaX = new ArrayList();
+        this.coordenadaX.addAll(coordenadaX);
+        this.coordenadaY = new ArrayList(); 
+        this.coordenadaY.addAll(coordenadaY);
+        this.numeroDePontos = coordenadaX.size();
         this.nomeDaForma = nome;
     }
 
     //Getters e setters que permitem obter/modificar o conteudo dos campos
-    public double[] getCoordenadaX() {
+    public ArrayList getCoordenadaX() {
         return coordenadaX;
     }
 
 
-    public double[] getCoordenadaY() {
+    public ArrayList getCoordenadaY() {
         return coordenadaY;
     }
 
